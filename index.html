@@ -8,13 +8,56 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="h-screen bg-gray-100 text-gray-800">
-    <div class="h-full flex items-center justify-center">
-        <div class="bg-white p-8 rounded shadow w-full max-w-xl text-center">
-            <h1 class="text-2xl font-bold mb-4">This HTML website is using Tailwind</h1>
-            <p class="text-gray-600">Taillwind is being used for this website</p>
+<body class="w-screen bg-gray-100">
+    <div class="w-full bg-white grid grid-cols-5 py-2 px-32 border-y">
+        <div></div>
+        <div class="flex overflow-hidden justify-center col-span-3 text-[13px] ">
+            <div id="infoSlider" class="flex w-full transition-transform duration-500">
+                <div class="text-center min-w-full">Welcome to our store!</div>
+                <div class="text-center min-w-full">Free shipping on orders over $100!</div>
+                <div class="text-center min-w-full">New arrivals are here!</div>
+            </div>
+        </div>
+        <nav class="flex justify-end">
+            <ul class="flex flex-row gap-5 text-[13px]">
+                <li><a href="">Find a Store </a></li>
+                <li><a href="">Help</a></li>
+                <li><a href="">Register</a> | <a href="">Log In</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="w-full bg-white grid grid-cols-5 py-5 px-32 border-y shadow">
+        <div>
+            <p>Logo</p>
+        </div>
+        <nav class="flex col-span-3 justify-center text-xl">
+            <ul class="flex flex-row gap-14">
+                <li class="border-b-2 border-white hover:border-black"><a href="">New!</a></li>
+                <li class="border-b-2 border-white hover:border-black"><a href="">Men</a></li>
+                <li class="border-b-2 border-white hover:border-black"><a href="">Women</a></li>
+                <li class="border-b-2 border-white hover:border-black"><a href="">Kids</a></li>
+                <li class="border-b-2 border-white hover:border-black"><a href="">Sale!</a></li>
+            </ul>
+        </nav>
+        <div class="flex justify-end">
+            <input class="border rounded p-1" placeholder="🔍 Search"/>
+            <button class="border rounded px-4 py-1 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Search</button>
         </div>
     </div>
+    
+
+
+
+    <script>
+        const slider = document.getElementById('infoSlider');
+        const totalSlides = slider.children.length;
+        let currentIndex = 0;
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }, 5000); 
+        </script>
 </body>
 
 </html>
