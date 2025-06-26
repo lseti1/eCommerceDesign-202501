@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eCommerce Design 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -20,9 +21,9 @@
         </div>
         <nav class="flex justify-end">
             <ul class="flex flex-row gap-5 text-[13px]">
-                <li><a href="">Find a Store </a></li>
-                <li><a href="">Help</a></li>
-                <li><a href="">Register</a> | <a href="">Log In</a></li>
+                <li><a class="pointer-events-none" href="">Find a Store </a></li>
+                <li><a class="pointer-events-none" href="">Help</a></li>
+                <li><a class="pointer-events-none" href="">Register</a> | <a class="pointer-events-none" href="">Log In</a></li>
             </ul>
         </nav>
     </div>
@@ -33,20 +34,60 @@
         <nav class="flex col-span-3 justify-center text-xl">
             <ul class="flex flex-row gap-14">
                 <li class="border-b-2 border-white hover:border-black"><a href="">New!</a></li>
-                <li class="border-b-2 border-white hover:border-black"><a href="">Men</a></li>
-                <li class="border-b-2 border-white hover:border-black"><a href="">Women</a></li>
-                <li class="border-b-2 border-white hover:border-black"><a href="">Kids</a></li>
+                <li class="border-b-2 border-white hover:border-black"><a href="">Computers</a></li>
+                <li class="border-b-2 border-white hover:border-black"><a href="">Devices</a></li>
+                <li class="border-b-2 border-white hover:border-black"><a href="">Accessories</a></li>
                 <li class="border-b-2 border-white hover:border-black"><a href="">Sale!</a></li>
             </ul>
         </nav>
-        <div class="flex justify-end">
+        <div class="flex justify-end gap-3">
             <input class="border rounded p-1" placeholder="🔍 Search"/>
             <button class="border rounded px-4 py-1 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Search</button>
+            <i class="fas fa-shopping-cart text-gray-700 text-2xl"></i>
         </div>
     </div>
-    
+    <div class="w-full px-32">
+        <div class="bg-gray-500 shadow-lg">
+            <img src="images/HeroBanner.jpg"/>
+        </div>
+    </div>
+    <div class="w-full px-32">
+        <div>
+            <h1 class="text-5xl px-5 pt-10 pb-5">New Tech Drops</h1>
+            <div class="flex justify-between gap-5">
+                <div class="w-full h-full">
+                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/9070XT.webp"/>
+                    <p class="text-3xl px-2 py-4">RTX 9070XT</p>
+                    <p class="px-2 text-gray-500">The AMD Radeon RX 9070 XT, launched in March 2025, features 16GB GDDR6 memory and RDNA 4 architecture. With 64 compute units and 128 AI accelerators, 
+                        it delivers powerful 4K gaming and AI performance. It supports PCIe 5.0, DisplayPort 2.1a, and HDMI 2.1b for next-gen connectivity.</p>
+                </div>
+                <div class="w-full">
+                    <img class="w-[100%] h-[500px] object-cover border bg-white " src="images/RTX5090.png"/>
+                    <p class="text-3xl px-2 py-4">RX 5090</p>
+                    <p class="px-2 text-gray-500">The flagship GPU featuring 32GB of GDDR7 memory and 21,760 CUDA cores. Built on the advanced Blackwell architecture, it delivers exceptional 4K gaming, 
+                        real-time ray tracing, and AI-accelerated performance — perfect for gamers and creators seeking the best.</p>
+                </div>
+                <div class="w-full">
+                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/PC Case.webp"/>
+                    <p class="text-3xl px-2 py-4">Lian Li PC Case</p>
+                    <p class="px-2 text-gray-500">A premium, sleek chassis designed for superior airflow and modularity. Crafted with high-quality aluminum and tempered glass, it supports advanced 
+                        cooling setups and offers flexible storage options — ideal for custom PC builds and enthusiasts.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div>
+        <p>hello</p>
+    </div>
 
 
+
+
+
+    <footer>
+        <p>Privacy Policy</p>
+    </footer>
 
     <script>
         const slider = document.getElementById('infoSlider');
