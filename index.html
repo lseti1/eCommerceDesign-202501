@@ -19,14 +19,15 @@
                 <div class="text-center min-w-full">New arrivals are here!</div>
 
                 <!-- Cloned for Carousel View -->
-                <div class="text-center min-w-full">Welcome to our store!</div> 
+                <div class="text-center min-w-full">Welcome to our store!</div>
             </div>
         </div>
         <nav class="flex justify-end">
             <ul class="flex flex-row gap-5 text-[13px]">
                 <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Find a Store </a></li>
                 <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Help</a></li>
-                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Register</a> | <a class="pointer-events-none" href="">Log
+                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Register</a> | <a
+                        class="pointer-events-none" href="">Log
                         In</a></li>
             </ul>
         </nav>
@@ -46,7 +47,8 @@
         </nav>
         <div class="flex justify-end gap-3 py-5">
             <input class="border rounded p-1" placeholder="🔍 Search" />
-            <button class="pointer-events-none rounded px-4 py-1 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Search</button>
+            <button
+                class="pointer-events-none rounded px-4 py-1 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Search</button>
             <i class="fas fa-shopping-cart text-gray-700 text-2xl"></i>
         </div>
     </div>
@@ -88,56 +90,90 @@
     </div>
     <div class="w-full px-32 my-12">
         <div class="flex justify-center">
-            <img class="w-[70%]" src="/images/Prebuilt PCs.png"/>
+            <img class="w-[70%]" src="/images/Prebuilt PCs.png" />
         </div>
         <div class="flex flex-col items-center">
             <h1 class="text-8xl tracking-tighter font-bold">Pre-Built PCs</h1>
-            <p class="text-2xl">Custom PCs built with the best quality components, tailored to your performance, gaming, or professional needs.</p>
+            <p class="text-2xl">Custom PCs built with the best quality components, tailored to your performance, gaming,
+                or professional needs.</p>
             <div class="flex flex-row p-4 gap-4">
-                <button class="rounded px-4 py-3 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Shop Pre-Built Customs</button>
-                <button class="rounded px-4 py-3 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Shop Pre-Built Stock</button>
+                <button class="rounded px-4 py-3 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Shop
+                    Pre-Built Customs</button>
+                <button class="rounded px-4 py-3 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Shop
+                    Pre-Built Stock</button>
             </div>
         </div>
     </div>
-    <div class="w-full px-32">
-        <div>
-            <h1 class="text-6xl tracking-tighter font-bold pt-10 pb-5">Best Sellers</h1>
-            <div class="flex justify-between gap-5">
-                <div class="w-full h-full">
-                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/9070XT.webp" />
-                    <p class="text-3xl px-2 py-4">RTX 9070XT</p>
-                    <p class="px-2 text-gray-500">The AMD Radeon RX 9070 XT, launched in March 2025, features 16GB GDDR6
-                        memory and RDNA 4 architecture. With 64 compute units and 128 AI accelerators,
-                        it delivers powerful 4K gaming and AI performance. It supports PCIe 5.0, DisplayPort 2.1a, and
-                        HDMI 2.1b for next-gen connectivity.</p>
-                </div>
-                <div class="w-full">
-                    <img class="w-[100%] h-[500px] object-cover border bg-white " src="images/RTX5090.png" />
-                    <p class="text-3xl px-2 py-4">RX 5090</p>
-                    <p class="px-2 text-gray-500">The flagship GPU featuring 32GB of GDDR7 memory and 21,760 CUDA cores.
-                        Built on the advanced Blackwell architecture, it delivers exceptional 4K gaming,
-                        real-time ray tracing, and AI-accelerated performance — perfect for gamers and creators seeking
-                        the best.</p>
-                </div>
-                <div class="w-full">
-                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/PC Case.webp" />
-                    <p class="text-3xl px-2 py-4">Lian Li PC Case</p>
-                    <p class="px-2 text-gray-500">A premium, sleek chassis designed for superior airflow and modularity.
-                        Crafted with high-quality aluminum and tempered glass, it supports advanced
-                        cooling setups and offers flexible storage options — ideal for custom PC builds and enthusiasts.
-                    </p>
-                </div>
+    <div class="relative w-full px-32 overflow-hidden">
+        <div class="flex items-center justify-between">
+            <h1 class="text-6xl tracking-tighter font-bold py-5">Best Sellers</h1>
+            <div class="flex items-center justify-center gap-5">
+                <button id="prev" class="w-10 h-10 text-gray-500 text-5xl rounded-full bg-gray-200 hover:bg-gray-300">&lt</button>
+                <button id="next" class="w-10 h-10 text-gray-500 text-5xl rounded-full bg-gray-200 hover:bg-gray-300">&gt</button>
             </div>
         </div>
-    </div>
+        
+        <div id="sliderWrapper" class="overflow-x-hidden w-full h-full">
+            <div id="manualInfoSlider" class="flex transition-transform duration-500">
+                <!-- Clones of last 3 slides for start of loop -->
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/Artic Liquid Freezer 3.jpg"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">Artic Liquid Freezer 3</p>
+                </div>
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/KrakenElite360RGB.jpg"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">NZXT Kraken Elite 360</p>
+                </div>
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/Ryzen7800X3D.avif"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">Ryzen 7 7800X3D</p>
+                </div>
 
+                <!-- 5 slides -->
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/RX 7900XTX.jpg"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">AMD RX 7900XTX</p>
+                </div>
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/RTX 5080.webp"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">GeForce RTX 5080</p>
+                </div>
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/Artic Liquid Freezer 3.jpg"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">Artic Liquid Freezer 3</p>
+                </div>
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/KrakenElite360RGB.jpg"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">NZXT Kraken Elite 360</p>
+                </div>
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/Ryzen7800X3D.avif"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">Ryzen 7 7800X3D</p>
+                </div>
+
+                <!-- Clones of first 3 slides for end of loop -->
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/RX 7900XTX.jpg"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">AMD RX 7900XTX</p>
+                </div>
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/RTX 5080.webp"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">GeForce RTX 5080</p>
+                </div>
+                <div class="w-1/3 shrink-0 p-2 text-center">
+                    <img src="/images/Artic Liquid Freezer 3.jpg"/>
+                    <p class="text-5xl tracking-tighter text-center font-thin py-4">Artic Liquid Freezer 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
 
     <footer class="flex flex-col border-t-2 mt-5 bg-white">
         <div class="flex justify-center py-6">
-            <img src="/images/logo.png" class="h-16 w-16 rounded-xl"/>
+            <img src="/images/logo.png" class="h-16 w-16 rounded-xl" />
         </div>
         <div class="flex flex-row justify-center gap-32">
             <div class="flex flex-col">
@@ -145,9 +181,10 @@
                 <ul class="flex flex-col gap-2">
                     <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Help Desk</a></li>
                     <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Contact Us</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none"href="">Order History</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Order History</a></li>
                     <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Track Order</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Change Delivery Options</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Change Delivery Options</a>
+                    </li>
                     <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Delivery & Assitance</a></li>
                 </ul>
             </div>
@@ -193,25 +230,81 @@
     </footer>
 
     <script>
-        const slider = document.getElementById('infoSlider');
-        const totalSlides = slider.children.length;
-        const transitionDuration = 500;
-        let currentIndex = 0;
+        (function () {
+            const slider = document.getElementById('infoSlider');
+            const totalSlides = slider.children.length;
+            const transitionDuration = 500;
+            let currentIndex = 0;
 
-        setInterval(() => {
-            currentIndex++;
+            setInterval(() => {
+                currentIndex++;
 
-            slider.style.transition = `transform ${transitionDuration}ms ease-in-out`;
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                slider.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-            if (currentIndex === totalSlides - 1) {
-                setTimeout(() => {
-                    slider.style.transition = 'none';
-                    slider.style.transform = `translateX(0%)`;
-                    currentIndex = 0;
-                }, transitionDuration);
+                if (currentIndex === totalSlides - 1) {
+                    setTimeout(() => {
+                        slider.style.transition = 'none';
+                        slider.style.transform = `translateX(0%)`;
+                        currentIndex = 0;
+                    }, transitionDuration);
+                }
+            }, 5000);
+        })();
+    </script>
+    <script>
+        (function () {
+            const slider = document.getElementById('manualInfoSlider');
+            const slidesToShow = 3;
+            const totalOriginalSlides = 5;
+            const totalSlides = slider.children.length;
+            let currentIndex = slidesToShow; // Start at first original slide (index 3, since there are 3 clones)
+
+            slider.style.transform = `translateX(-${(100 / slidesToShow) * currentIndex}%)`;
+
+            function moveToIndex(index) {
+                slider.style.transition = 'transform 0.5s ease-in-out';
+                slider.style.transform = `translateX(-${(100 / slidesToShow) * index}%)`;
+                currentIndex = index;
             }
-        }, 5000); 
+
+            function nextSlide() {
+                if (currentIndex >= totalOriginalSlides + slidesToShow) { // Just after the actual ORIGINAL slides (not clones), jump instantly to first ORIGINAL slide
+                    slider.style.transition = 'none';
+                    currentIndex = slidesToShow;
+                    slider.style.transform = `translateX(-${(100 / slidesToShow) * currentIndex}%)`;
+                    
+                    setTimeout(() => { // Then slide to next
+                        slider.style.transition = 'transform 0.5s ease-in-out';
+                        currentIndex++;
+                        slider.style.transform = `translateX(-${(100 / slidesToShow) * currentIndex}%)`;
+                    }, 50);
+                } else {
+                    currentIndex++;
+                    moveToIndex(currentIndex);
+                }
+            }
+
+            function prevSlide() {
+                if (currentIndex <= 0) { // Just before the actual ORIGINAL slides (not clones), jump instantly to last ORIGINAL slide
+                    slider.style.transition = 'none';
+                    currentIndex = totalOriginalSlides;
+                    slider.style.transform = `translateX(-${(100 / slidesToShow) * currentIndex}%)`;
+
+                    setTimeout(() => { // Then slide to prev
+                        slider.style.transition = 'transform 0.5s ease-in-out';
+                        currentIndex--;
+                        slider.style.transform = `translateX(-${(100 / slidesToShow) * currentIndex}%)`;
+                    }, 50);
+                } else {
+                    currentIndex--;
+                    moveToIndex(currentIndex);
+                }
+            }
+
+            document.getElementById('next').addEventListener('click', nextSlide);
+            document.getElementById('prev').addEventListener('click', prevSlide);
+        })();
     </script>
 </body>
 
