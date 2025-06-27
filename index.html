@@ -21,15 +21,16 @@
         </div>
         <nav class="flex justify-end">
             <ul class="flex flex-row gap-5 text-[13px]">
-                <li><a class="pointer-events-none" href="">Find a Store </a></li>
-                <li><a class="pointer-events-none" href="">Help</a></li>
-                <li><a class="pointer-events-none" href="">Register</a> | <a class="pointer-events-none" href="">Log In</a></li>
+                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Find a Store </a></li>
+                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Help</a></li>
+                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Register</a> | <a class="pointer-events-none" href="">Log
+                        In</a></li>
             </ul>
         </nav>
     </div>
     <div class="w-full bg-white grid grid-cols-5 px-32 border-y shadow">
         <div class="flex items-center">
-            <img src="/images/logo.png" class="h-16 w-14 rounded">
+            <img src="/images/logo.png" class="h-16 w-16 rounded-xl">
         </div>
         <nav class="flex col-span-3 justify-center text-xl py-5">
             <ul class="flex flex-row gap-14">
@@ -41,14 +42,14 @@
             </ul>
         </nav>
         <div class="flex justify-end gap-3 py-5">
-            <input class="border rounded p-1" placeholder="🔍 Search"/>
-            <button class="border rounded px-4 py-1 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Search</button>
+            <input class="border rounded p-1" placeholder="🔍 Search" />
+            <button class="pointer-events-none rounded px-4 py-1 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Search</button>
             <i class="fas fa-shopping-cart text-gray-700 text-2xl"></i>
         </div>
     </div>
     <div class="w-full px-32">
         <div class="bg-gray-500 shadow-lg">
-            <img src="images/HeroBanner.jpg"/>
+            <img src="images/HeroBanner.jpg" />
         </div>
     </div>
     <div class="w-full px-32">
@@ -56,37 +57,93 @@
             <h1 class="text-5xl px-5 pt-10 pb-5">New Tech Drops</h1>
             <div class="flex justify-between gap-5">
                 <div class="w-full h-full">
-                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/9070XT.webp"/>
+                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/9070XT.webp" />
                     <p class="text-3xl px-2 py-4">RTX 9070XT</p>
-                    <p class="px-2 text-gray-500">The AMD Radeon RX 9070 XT, launched in March 2025, features 16GB GDDR6 memory and RDNA 4 architecture. With 64 compute units and 128 AI accelerators, 
-                        it delivers powerful 4K gaming and AI performance. It supports PCIe 5.0, DisplayPort 2.1a, and HDMI 2.1b for next-gen connectivity.</p>
+                    <p class="px-2 text-gray-500">The AMD Radeon RX 9070 XT, launched in March 2025, features 16GB GDDR6
+                        memory and RDNA 4 architecture. With 64 compute units and 128 AI accelerators,
+                        it delivers powerful 4K gaming and AI performance. It supports PCIe 5.0, DisplayPort 2.1a, and
+                        HDMI 2.1b for next-gen connectivity.</p>
                 </div>
                 <div class="w-full">
-                    <img class="w-[100%] h-[500px] object-cover border bg-white " src="images/RTX5090.png"/>
+                    <img class="w-[100%] h-[500px] object-cover border bg-white " src="images/RTX5090.png" />
                     <p class="text-3xl px-2 py-4">RX 5090</p>
-                    <p class="px-2 text-gray-500">The flagship GPU featuring 32GB of GDDR7 memory and 21,760 CUDA cores. Built on the advanced Blackwell architecture, it delivers exceptional 4K gaming, 
-                        real-time ray tracing, and AI-accelerated performance — perfect for gamers and creators seeking the best.</p>
+                    <p class="px-2 text-gray-500">The flagship GPU featuring 32GB of GDDR7 memory and 21,760 CUDA cores.
+                        Built on the advanced Blackwell architecture, it delivers exceptional 4K gaming,
+                        real-time ray tracing, and AI-accelerated performance — perfect for gamers and creators seeking
+                        the best.</p>
                 </div>
                 <div class="w-full">
-                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/PC Case.webp"/>
+                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/PC Case.webp" />
                     <p class="text-3xl px-2 py-4">Lian Li PC Case</p>
-                    <p class="px-2 text-gray-500">A premium, sleek chassis designed for superior airflow and modularity. Crafted with high-quality aluminum and tempered glass, it supports advanced 
-                        cooling setups and offers flexible storage options — ideal for custom PC builds and enthusiasts.</p>
+                    <p class="px-2 text-gray-500">A premium, sleek chassis designed for superior airflow and modularity.
+                        Crafted with high-quality aluminum and tempered glass, it supports advanced
+                        cooling setups and offers flexible storage options — ideal for custom PC builds and enthusiasts.
+                    </p>
                 </div>
-                
+
             </div>
         </div>
     </div>
-    <div>
-        <p>hello</p>
-    </div>
 
 
 
 
 
-    <footer>
-        <p>Privacy Policy</p>
+    <footer class="flex flex-col border-t-2 my-5">
+        <div class="flex justify-center py-6">
+            <img src="/images/logo.png" class="h-16 w-16 rounded-xl"/>
+        </div>
+        <div class="flex flex-row justify-center gap-32">
+            <div class="flex flex-col">
+                <h1 class="pb-4 font-semibold">GET HELP</h1>
+                <ul class="flex flex-col gap-2">
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Help Desk</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Contact Us</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none"href="">Order History</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Track Order</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Change Delivery Options</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Delivery & Assitance</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col">
+                <h1 class="pb-4 font-semibold">COMPANY</h1>
+                <ul class="flex flex-col gap-2">
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">About Us</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">News</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Careers</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Investors</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col">
+                <h1 class="pb-4 font-semibold">NEWS & EVENTS</h1>
+                <ul class="flex flex-col gap-2">
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Newsroom</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Events</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Media Library</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col">
+                <h1 class="pb-4 font-semibold">CUSTOM CATEGORIES</h1>
+                <ul class="flex flex-col gap-2">
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Specials</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Bargain Bin</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Gift Vouchers</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">New Prodcuts</a></li>
+                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Featured Products</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="py-10">
+            <ul class="flex flex-row gap-8 justify-center">
+                <li>© 2025 Company, Inc. All rights reserved</li>
+                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Terms of Use</a></li>
+                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Terms of Sale</a></li>
+                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Privacy & Cookie Policy</a></li>
+            </ul>
+        </div>
+
+
     </footer>
 
     <script>
@@ -98,7 +155,7 @@
             currentIndex = (currentIndex + 1) % totalSlides;
             slider.style.transform = `translateX(-${currentIndex * 100}%)`;
         }, 5000); 
-        </script>
+    </script>
 </body>
 
 </html>
