@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eCommerce Design 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+    <div id="headerNavBar"></div>
+
+    <div id="loyaltyProgramBanner"></div>
+    <div id="footer"></div>
+
+    <script>
+        fetch('partials/headerNavBar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('headerNavBar').innerHTML = html;
+
+                (function () {
+                    const slider = document.getElementById('infoSlider');
+                    const totalSlides = slider.children.length;
+                    const transitionDuration = 500;
+                    let currentIndex = 0;
+
+                    setInterval(() => {
+                        currentIndex++;
+
+                        slider.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+                        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                        if (currentIndex === totalSlides - 1) {
+                            setTimeout(() => {
+                                slider.style.transition = 'none';
+                                slider.style.transform = `translateX(0%)`;
+                                currentIndex = 0;
+                            }, transitionDuration);
+                        }
+                    }, 5000);
+                })();
+            });
+        fetch('partials/loyaltyProgramBanner.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('loyaltyProgramBanner').innerHTML = html;
+            });
+        fetch('partials/footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

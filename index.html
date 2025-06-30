@@ -12,48 +12,7 @@
 </head>
 
 <body class="w-screen bg-gray-100">
-    <div class="w-full bg-white grid grid-cols-5 py-2 px-32 border-y">
-        <div></div>
-        <div class="flex overflow-hidden justify-center col-span-3 text-[13px] ">
-            <div id="infoSlider" class="flex w-full transition-transform duration-500">
-                <div class="text-center min-w-full">Welcome to our store!</div>
-                <div class="text-center min-w-full">Free shipping on orders over $100!</div>
-                <div class="text-center min-w-full">New arrivals are here!</div>
-
-                <!-- Cloned for Carousel View -->
-                <div class="text-center min-w-full">Welcome to our store!</div>
-            </div>
-        </div>
-        <nav class="flex justify-end">
-            <ul class="flex flex-row gap-5 text-[13px]">
-                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Find a Store </a></li>
-                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Help</a></li>
-                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Register</a> | <a
-                        class="pointer-events-none" href="">Log
-                        In</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="w-full bg-white grid grid-cols-5 px-32 border-y shadow">
-        <div class="flex items-center">
-            <a href="index.html"><img src="/images/logo.png" class="h-16 w-16 rounded-xl"></a>
-        </div>
-        <nav class="flex col-span-3 justify-center text-xl py-5">
-            <ul class="flex flex-row gap-14">
-                <li class="border-b-2 border-white hover:border-black"><a href="new.html">New!</a></li>
-                <li class="border-b-2 border-white hover:border-black"><a href="computers.html">Computers</a></li>
-                <li class="border-b-2 border-white hover:border-black"><a href="mobile.html">Mobile</a></li>
-                <li class="border-b-2 border-white hover:border-black"><a href="accessories.html">Accessories</a></li>
-                <li class="border-b-2 border-white hover:border-black"><a href="sale.html">Sale!</a></li>
-            </ul>
-        </nav>
-        <div class="flex justify-end gap-3 py-5">
-            <input class="border rounded p-1" placeholder="🔍 Search" />
-            <button
-                class="pointer-events-none rounded px-4 py-1 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Search</button>
-            <i class="fas fa-shopping-cart text-gray-700 text-2xl"></i>
-        </div>
-    </div>
+    <div id="headerNavBar"></div>
     <div class="w-full px-32">
         <div class="bg-gray-500 shadow-lg">
             <a href="sale.html"><img src="images/HeroBanner.jpg" /></a>
@@ -64,7 +23,7 @@
             <h1 class="text-6xl tracking-tighter font-bold pt-10 pb-5">New Tech Drops</h1>
             <div class="flex justify-between gap-5">
                 <div class="w-full">
-                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/9070XT.webp"/>
+                    <img class="w-[100%] h-[500px] object-cover border bg-white" src="images/9070XT.webp" />
                     <p class="text-3xl px-2 py-4">AMD RX 9070XT</p>
                     <p class="px-2 text-gray-500">The AMD Radeon RX 9070 XT, launched in March 2025, features 16GB GDDR6
                         memory and RDNA 4 architecture. With 64 compute units and 128 AI accelerators,
@@ -110,60 +69,62 @@
         <div class="flex items-center justify-between">
             <h1 class="text-6xl tracking-tighter font-bold py-5">Best Sellers</h1>
             <div class="flex items-center justify-center gap-5">
-                <button id="prev" class="w-10 h-10 text-gray-500 text-5xl rounded-full bg-gray-200 hover:bg-gray-300">&lt</button>
-                <button id="next" class="w-10 h-10 text-gray-500 text-5xl rounded-full bg-gray-200 hover:bg-gray-300">&gt</button>
+                <button id="prev"
+                    class="w-10 h-10 text-gray-500 text-5xl rounded-full bg-gray-200 hover:bg-gray-300">&lt</button>
+                <button id="next"
+                    class="w-10 h-10 text-gray-500 text-5xl rounded-full bg-gray-200 hover:bg-gray-300">&gt</button>
             </div>
         </div>
-        
+
         <div id="sliderWrapper" class="overflow-x-hidden w-full h-full">
             <div id="manualInfoSlider" class="flex transition-transform duration-500">
                 <!-- Clones of last 3 slides for start of loop -->
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/Artic Liquid Freezer 3.jpg"/></a>
+                    <a href=""><img src="/images/Artic Liquid Freezer 3.jpg" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">Artic Liquid Freezer 3</p>
                 </div>
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/KrakenElite360RGB.jpg"/></a>
+                    <a href=""><img src="/images/KrakenElite360RGB.jpg" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">NZXT Kraken Elite 360</p>
                 </div>
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/Ryzen7800X3D.avif"/></a>
+                    <a href=""><img src="/images/Ryzen7800X3D.avif" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">Ryzen 7 7800X3D</p>
                 </div>
 
                 <!-- 5 slides -->
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/RX 7900XTX.jpg"/></a>
+                    <a href=""><img src="/images/RX 7900XTX.jpg" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">AMD RX 7900XTX</p>
                 </div>
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/RTX 5080.webp"/></a>
+                    <a href=""><img src="/images/RTX 5080.webp" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">GeForce RTX 5080</p>
                 </div>
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/Artic Liquid Freezer 3.jpg"/></a>
+                    <a href=""><img src="/images/Artic Liquid Freezer 3.jpg" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">Artic Liquid Freezer 3</p>
                 </div>
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/KrakenElite360RGB.jpg"/></a>
+                    <a href=""><img src="/images/KrakenElite360RGB.jpg" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">NZXT Kraken Elite 360</p>
                 </div>
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/Ryzen7800X3D.avif"/></a>
+                    <a href=""><img src="/images/Ryzen7800X3D.avif" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">Ryzen 7 7800X3D</p>
                 </div>
 
                 <!-- Clones of first 3 slides for end of loop -->
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/RX 7900XTX.jpg"/></a>
+                    <a href=""><img src="/images/RX 7900XTX.jpg" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">AMD RX 7900XTX</p>
                 </div>
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/RTX 5080.webp"/></a>
+                    <a href=""><img src="/images/RTX 5080.webp" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">GeForce RTX 5080</p>
                 </div>
                 <div class="w-1/3 shrink-0 p-2 text-center">
-                    <a href=""><img src="/images/Artic Liquid Freezer 3.jpg"/></a>
+                    <a href=""><img src="/images/Artic Liquid Freezer 3.jpg" /></a>
                     <p class="text-5xl tracking-tighter text-center font-thin py-4">Artic Liquid Freezer 3</p>
                 </div>
             </div>
@@ -171,149 +132,126 @@
     </div>
     <div class="px-32 w-full h-full py-10">
         <div class="flex flex-col w-full h-full">
-            <h1 class="text-4xl tracking-tighter font-semibold pb-4">Featured Products/Categories</h1>   
+            <h1 class="text-4xl tracking-tighter font-semibold pb-4">Featured Products/Categories</h1>
             <div class="flex w-full h-full">
                 <div class="w-1/6 shrink-0 p-2 text-center">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/9070XT.webp"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/9070XT.webp"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">AMD Graphics Cards</p>
                 </div>
                 <div class="w-1/6 shrink-0 p-2 text-center ">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/RTX 5080.webp"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/RTX 5080.webp"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">NVIDIA Graphics Cards</p>
                 </div>
                 <div class="w-1/6 shrink-0 p-2 text-center ">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/PC Case.webp"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/PC Case.webp"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">PC Cases</p>
                 </div>
                 <div class="w-1/6 shrink-0 p-2 text-center ">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/Artic Liquid Freezer 3.jpg"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/Artic Liquid Freezer 3.jpg"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">All-In-One Coolers</p>
                 </div>
                 <div class="w-1/6 shrink-0 p-2 text-center ">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/Ryzen7800X3D.avif"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/Ryzen7800X3D.avif"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">AMD CPUs</p>
                 </div>
                 <div class="w-1/6 shrink-0 p-2 text-center ">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/Prebuilt PCs.png"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/Prebuilt PCs.png"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">Prebuilt PCs</p>
                 </div>
             </div>
             <div class="flex w-full h-full">
                 <div class="w-1/6 shrink-0 p-2 text-center ">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/Monitor.webp"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/Monitor.webp"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">Gaming Monitors</p>
                 </div>
                 <div class="w-1/6 shrink-0 p-2 text-center ">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/Headphones.png"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/Headphones.png"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">Gaming Accesories</p>
                 </div>
                 <div class="w-1/6 shrink-0 p-2 text-center ">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/RAM.avif"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/RAM.avif"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">RAM</p>
                 </div>
                 <div class="w-1/6 shrink-0 p-2 text-center ">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/Motherboards.png"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/Motherboards.png"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">Motherboards</p>
                 </div>
                 <div class="w-1/6 shrink-0 p-2 text-center">
-                    <a href=""><img class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300" src="/images/NVMe SSDs.png"></a>
+                    <a href=""><img
+                            class="bg-white w-full h-64 object-cover hover:scale-[1.03] hover:shadow transition duration-300"
+                            src="/images/NVMe SSDs.png"></a>
                     <p class="text-2xl tracking-tighter font-thin py-2">NVMe SSDs</p>
                 </div>
                 <div class="flex w-1/6 justify-center items-center">
-                    <button class="text-2xl tracking-tighter font-thin bg-blue-600 text-white py-4 px-6 rounded hover:bg-blue-700 transition duration-300">View More</button>
+                    <button
+                        class="text-2xl tracking-tighter font-thin bg-blue-600 text-white py-4 px-6 rounded hover:bg-blue-700 transition duration-300">View
+                        More</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div>
-        <div class="flex flex-col justify-center items-center bg-gray-300 px-32 py-12">
-            <h1 class="text-6xl tracking-tighter font-bold pb-4">Become a Member & Start Earning Rewards</h1>
-            <p class="text-xl text-center px-64 pb-5">Get 10% off your next order when you sign up today & Earn points every time you shop and redeem them for discounts.
-                Members get early access to sales and special offers. Shop, earn and save now with our loyalty program!
-            </p>
-            <button class="rounded px-4 py-3 bg-blue-600 hover:bg-blue-700 transition duration-300 text-white">Join Now</button>
-        </div>
-    </div>
-
-    <footer class="flex flex-col border-t-2 bg-white">
-        <div class="flex justify-center py-6">
-            <a href="index.html"><img src="/images/logo.png" class="h-16 w-16 rounded-xl"></a>
-        </div>
-        <div class="flex flex-row justify-center gap-32 pb-8">
-            <div class="flex flex-col">
-                <h1 class="pb-4 font-semibold">GET HELP</h1>
-                <ul class="flex flex-col gap-2">
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Help Desk</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Contact Us</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Order History</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Track Order</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Change Delivery Options</a>
-                    </li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Delivery & Assitance</a></li>
-                </ul>
-            </div>
-            <div class="flex flex-col">
-                <h1 class="pb-4 font-semibold">COMPANY</h1>
-                <ul class="flex flex-col gap-2">
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">About Us</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">News</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Careers</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Investors</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Sustainability</a></li>
-                </ul>
-            </div>
-            <div class="flex flex-col">
-                <h1 class="pb-4 font-semibold">NEWS & EVENTS</h1>
-                <ul class="flex flex-col gap-2">
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Newsroom</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Events</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Media Library</a></li>
-                </ul>
-            </div>
-            <div class="flex flex-col">
-                <h1 class="pb-4 font-semibold">CUSTOM CATEGORIES</h1>
-                <ul class="flex flex-col gap-2">
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Specials</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Bargain Bin</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Gift Vouchers</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">New Prodcuts</a></li>
-                    <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Featured Products</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="py-8 border">
-            <ul class="flex flex-row gap-8 justify-center">
-                <li>© 2025 Company, Inc. All rights reserved</li>
-                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Terms of Use</a></li>
-                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Terms of Sale</a></li>
-                <li class="hover:text-blue-500"><a class="pointer-events-none" href="">Privacy & Cookie Policy</a></li>
-            </ul>
-        </div>
-    </footer>
+    <div id="loyaltyProgramBanner"></div>
+    <div id="footer"></div>
 
     <script>
-        (function () {
-            const slider = document.getElementById('infoSlider');
-            const totalSlides = slider.children.length;
-            const transitionDuration = 500;
-            let currentIndex = 0;
+        fetch('partials/headerNavBar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('headerNavBar').innerHTML = html;
 
-            setInterval(() => {
-                currentIndex++;
+                (function () {
+                    const slider = document.getElementById('infoSlider');
+                    const totalSlides = slider.children.length;
+                    const transitionDuration = 500;
+                    let currentIndex = 0;
 
-                slider.style.transition = `transform ${transitionDuration}ms ease-in-out`;
-                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    setInterval(() => {
+                        currentIndex++;
 
-                if (currentIndex === totalSlides - 1) {
-                    setTimeout(() => {
-                        slider.style.transition = 'none';
-                        slider.style.transform = `translateX(0%)`;
-                        currentIndex = 0;
-                    }, transitionDuration);
-                }
-            }, 5000);
-        })();
+                        slider.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+                        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                        if (currentIndex === totalSlides - 1) {
+                            setTimeout(() => {
+                                slider.style.transition = 'none';
+                                slider.style.transform = `translateX(0%)`;
+                                currentIndex = 0;
+                            }, transitionDuration);
+                        }
+                    }, 5000);
+                })();
+            });
+        fetch('partials/loyaltyProgramBanner.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('loyaltyProgramBanner').innerHTML = html;
+            });
+        fetch('partials/footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            });
     </script>
     <script>
         (function () {
@@ -336,7 +274,7 @@
                     slider.style.transition = 'none';
                     currentIndex = slidesToShow;
                     slider.style.transform = `translateX(-${(100 / slidesToShow) * currentIndex}%)`;
-                    
+
                     setTimeout(() => { // Then slide to next
                         slider.style.transition = 'transform 0.5s ease-in-out';
                         currentIndex++;
