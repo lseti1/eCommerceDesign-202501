@@ -18,7 +18,7 @@
     <div id="footer"></div>
 
     <script>
-        fetch('partials/headerNavBar.html')
+        fetch('/partials/headerNavBar.html')
             .then(res => res.text())
             .then(html => {
                 document.getElementById('headerNavBar').innerHTML = html;
@@ -45,12 +45,12 @@
                     }, 5000);
                 })();
             });
-        fetch('partials/loyaltyProgramBanner.html')
+        fetch('/partials/loyaltyProgramBanner.html')
             .then(res => res.text())
             .then(html => {
                 document.getElementById('loyaltyProgramBanner').innerHTML = html;
             });
-        fetch('partials/footer.html')
+        fetch('/partials/footer.html')
             .then(res => res.text())
             .then(html => {
                 document.getElementById('footer').innerHTML = html;
