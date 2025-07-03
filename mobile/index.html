@@ -18,7 +18,7 @@
             <p class="absolute top-5 left-0 text-gray-500">Mobile / Apple Devices</p>
             <h1 class="text-6xl tracking-tighter font-bold">Apple Phones</h1>
             <div class="flex flex-row justify-end items-center gap-5">
-                <p class="text-gray-500">5 Items</p>
+                <p id="items" class="text-gray-500"></p>
                 <select class="px-4 py-2 rounded border-2 border-gray-300 bg-transparent cursor-pointer hover:border-blue-500">
                     <option>Top-Selling</option>
                     <option>Price: Lowest to Highest</option>
@@ -38,7 +38,7 @@
                 <a href="" class="py-2 w-40 text-xl text-center text-gray-700 border-y border-black hover:text-black hover:underline">Huawei Devices</a>
                 <a href="" class="py-2 w-40 text-xl text-center text-gray-700 border-y border-black hover:text-black hover:underline">OPPO Devices</a>
             </div>
-            <div class="w-[85%] grid grid-cols-3 -mt-2">
+            <div id="products" class="w-[85%] grid grid-cols-3 -mt-2">
                 <div class="m-2 border object-center overflow-hidden p-2">
                     <a class="" href="">
                         <img class="h-[400px] object-contain mx-auto p-4" src="/images/iPhone 16 Pro Max.webp"/>
@@ -130,6 +130,10 @@
             .then(html => {
                 document.getElementById('footer').innerHTML = html;
             });
+            
+        const productCount = document.getElementById('products');
+        const numberOfProducts = productCount.children.length;
+        document.getElementById('items').textContent = `${numberOfProducts} items`;
     </script>
 </body>
 </html>
