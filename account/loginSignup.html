@@ -73,56 +73,59 @@
                 toggleView();
             }
         })
+        Promise.all([
+            fetch('/partials/cartDrawer.html').then(res => res.text()),
+            fetch('/partials/headerNavBar.html').then(res => res.text())
+        ]).then(([cartHtml, headerHtml]) => {
+            document.getElementById('cartDrawer').innerHTML = cartHtml;
+            document.getElementById('headerNavBar').innerHTML = headerHtml;
 
-        fetch('/partials/cartDrawer.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('cartDrawer').innerHTML = html;
+            (function () {
+                    const slider = document.getElementById('infoSlider');
+                    const totalSlides = slider.children.length;
+                    const transitionDuration = 500;
+                    let currentIndex = 0;
+
+                    setInterval(() => {
+                        currentIndex++;
+
+                        slider.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+                        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                        if (currentIndex === totalSlides - 1) {
+                            setTimeout(() => {
+                                slider.style.transition = 'none';
+                                slider.style.transform = `translateX(0%)`;
+                                currentIndex = 0;
+                            }, transitionDuration);
+                        }
+                    }, 5000);
+                })();
+
+            const cartButton = document.getElementById("cart");
+            const cartDrawer = document.getElementById("cartDrawerDiv");
+            const cartExit = document.getElementById("cartDrawerExit");
+            const cartView = document.getElementById("cartWindow");
+
+            cartButton?.addEventListener('click', toggleCartDrawer);
+            cartExit?.addEventListener('click', toggleCartDrawer);
+            cartDrawer?.addEventListener('click',  toggleCartDrawer);
+            cartView?.addEventListener('click', (e) => e.stopPropagation());
+
+            function toggleCartDrawer() {
+                cartDrawer.classList.toggle('max-w-[0%]');
+                cartDrawer.classList.toggle('opacity-0');
+                cartDrawer.classList.toggle('opacity-100');
+            }
+
+            const codeInputButton = document.getElementById("codeInputButton");
+            const promoCodeInput = document.getElementById("promoCodeInput");
+            
+            codeInputButton.addEventListener('click', () => {
+                promoCodeInput.classList.toggle("hidden");
+                codeInputButton.classList.toggle("rotate-180");
             });
-        fetch('/partials/headerNavBar.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('headerNavBar').innerHTML = html;
-
-                const currentPath = window.location.pathname;
-                console.log(currentPath);
-                const navBar = document.querySelector('#navBarItems')
-
-                for (const child of navBar.children) {
-                    const link = child.querySelector('a');
-                    if (link.getAttribute('href') == currentPath) {
-                        console.log("Match at link:", link);
-                        link.classList.add("text-red-500");
-                    }
-                    else {
-                        link.classList.remove("text-red-500");
-                    }
-                }
-
-                const cartButton = document.getElementById("cart");
-                const cartDrawer = document.getElementById("cartDrawerDiv");
-                const cartExit = document.getElementById("cartDrawerExit");
-                const cartView = document.getElementById("cartWindow");
-
-                cartButton.addEventListener('click', toggleCartDrawer);
-                cartExit.addEventListener('click', toggleCartDrawer);
-                cartDrawer.addEventListener('click',  toggleCartDrawer);
-                cartView.addEventListener('click', (e) => e.stopPropagation());
-
-                function toggleCartDrawer() {
-                    cartDrawer.classList.toggle('max-w-[0%]');
-                    cartDrawer.classList.toggle('opacity-0');
-                    cartDrawer.classList.toggle('opacity-100');
-                }
-
-                const codeInputButton = document.getElementById("codeInputButton");
-                const promoCodeInput = document.getElementById("promoCodeInput");
-                
-                codeInputButton.addEventListener('click', () => {
-                    promoCodeInput.classList.toggle("hidden");
-                    codeInputButton.classList.toggle("rotate-180");
-                })
-            });
+        });
         fetch('/partials/footer.html')
             .then(res => res.text())
             .then(html => {

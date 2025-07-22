@@ -272,18 +272,14 @@
     <div id="footer"></div>
 
     <script>
-        fetch('partials/cartDrawer.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('cartDrawer').innerHTML = html;
-            });
-        fetch('partials/headerNavBar.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('headerNavBar').innerHTML = html;
+        Promise.all([
+            fetch('/partials/cartDrawer.html').then(res => res.text()),
+            fetch('/partials/headerNavBar.html').then(res => res.text())
+        ]).then(([cartHtml, headerHtml]) => {
+            document.getElementById('cartDrawer').innerHTML = cartHtml;
+            document.getElementById('headerNavBar').innerHTML = headerHtml;
 
-                // This is for the mini carousel
-                (function () {
+            (function () {
                     const slider = document.getElementById('infoSlider');
                     const totalSlides = slider.children.length;
                     const transitionDuration = 500;
@@ -305,32 +301,30 @@
                     }, 5000);
                 })();
 
-                // This is for bringing up the cart side panel
-                const cartButton = document.getElementById("cart");
-                const cartDrawer = document.getElementById("cartDrawerDiv");
-                const cartExit = document.getElementById("cartDrawerExit");
-                const cartView = document.getElementById("cartWindow");
+            const cartButton = document.getElementById("cart");
+            const cartDrawer = document.getElementById("cartDrawerDiv");
+            const cartExit = document.getElementById("cartDrawerExit");
+            const cartView = document.getElementById("cartWindow");
 
-                cartButton.addEventListener('click', toggleCartDrawer);
-                cartExit.addEventListener('click', toggleCartDrawer);
-                cartDrawer.addEventListener('click',  toggleCartDrawer);
-                cartView.addEventListener('click', (e) => e.stopPropagation());
+            cartButton?.addEventListener('click', toggleCartDrawer);
+            cartExit?.addEventListener('click', toggleCartDrawer);
+            cartDrawer?.addEventListener('click',  toggleCartDrawer);
+            cartView?.addEventListener('click', (e) => e.stopPropagation());
 
-                function toggleCartDrawer() {
-                    cartDrawer.classList.toggle('max-w-[0%]');
-                    cartDrawer.classList.toggle('opacity-0');
-                    cartDrawer.classList.toggle('opacity-100');
-                }
+            function toggleCartDrawer() {
+                cartDrawer.classList.toggle('max-w-[0%]');
+                cartDrawer.classList.toggle('opacity-0');
+                cartDrawer.classList.toggle('opacity-100');
+            }
 
-                // This is specifically for the promo code showing up inside the cart drawer/side panel
-                const codeInputButton = document.getElementById("codeInputButton");
-                const promoCodeInput = document.getElementById("promoCodeInput");
-                
-                codeInputButton.addEventListener('click', () => {
-                    promoCodeInput.classList.toggle("hidden");
-                    codeInputButton.classList.toggle("rotate-180");
-                })
+            const codeInputButton = document.getElementById("codeInputButton");
+            const promoCodeInput = document.getElementById("promoCodeInput");
+            
+            codeInputButton.addEventListener('click', () => {
+                promoCodeInput.classList.toggle("hidden");
+                codeInputButton.classList.toggle("rotate-180");
             });
+        });
         fetch('partials/loyaltyProgramBanner.html')
             .then(res => res.text())
             .then(html => {
